@@ -62,3 +62,8 @@ WHERE de.to_date = ('9999-01-01')
 AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY emp_no ASC;
 
+SELECT COUNT(me.title), title
+--INTO mentorship_title
+FROM mentorship_eligibility AS me
+GROUP BY me.title
+ORDER BY me.count DESC;
